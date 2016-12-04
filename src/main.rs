@@ -14,5 +14,5 @@ fn main() {
 	let mut mount = Mount::new();
 	mount.mount("/", Static::new(Path::new("./")));
 	println!("listening on port {:?}", port);
-	Iron::new(mount).http(("127.0.0.1", port)).unwrap();
+	Iron::new(mount).http(("0.0.0.0", port)).unwrap();
 }
